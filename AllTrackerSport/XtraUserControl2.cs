@@ -12,6 +12,7 @@ using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Helpers;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
+using DevExpress.XtraMap;
 
 namespace AllTrackerSport
 {
@@ -21,7 +22,10 @@ namespace AllTrackerSport
         {
             InitializeComponent();
 
-         
+
         }
+
+      
     }
+       
 }

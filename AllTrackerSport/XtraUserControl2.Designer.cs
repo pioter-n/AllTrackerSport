@@ -1,4 +1,5 @@
 ﻿namespace AllTrackerSport
+
 {
     partial class XtraUserControl2
     {
@@ -42,8 +43,8 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraMap.MiniMap miniMap1 = new DevExpress.XtraMap.MiniMap();
             DevExpress.XtraMap.DynamicMiniMapBehavior dynamicMiniMapBehavior1 = new DevExpress.XtraMap.DynamicMiniMapBehavior();
-            DevExpress.XtraMap.MiniMapImageTilesLayer miniMapImageTilesLayer1 = new DevExpress.XtraMap.MiniMapImageTilesLayer();
-            DevExpress.XtraMap.MiniMapVectorItemsLayer miniMapVectorItemsLayer1 = new DevExpress.XtraMap.MiniMapVectorItemsLayer();
+            this.miniMapImageTilesLayer1 = new DevExpress.XtraMap.MiniMapImageTilesLayer();
+            this.miniMapVectorItemsLayer1 = new DevExpress.XtraMap.MiniMapVectorItemsLayer();
             this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -57,9 +58,12 @@
             this.bingMapDataProvider1 = new DevExpress.XtraMap.BingMapDataProvider();
             this.mapItemStorage1 = new DevExpress.XtraMap.MapItemStorage();
             this.mapControl1 = new DevExpress.XtraMap.MapControl();
-            this.imageLayer1 = new DevExpress.XtraMap.ImageLayer();
-            this.openStreetMapDataProvider1 = new DevExpress.XtraMap.OpenStreetMapDataProvider();
             this.informationLayer2 = new DevExpress.XtraMap.InformationLayer();
+            this.bingRouteDataProvider1 = new DevExpress.XtraMap.BingRouteDataProvider();
+            this.imageLayer1 = new DevExpress.XtraMap.ImageLayer();
+            this.bingMapDataProvider2 = new DevExpress.XtraMap.BingMapDataProvider();
+            this.informationLayer1 = new DevExpress.XtraMap.InformationLayer();
+            this.bingElevationDataProvider1 = new DevExpress.XtraMap.BingElevationDataProvider();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapControl1)).BeginInit();
@@ -161,16 +165,25 @@
             this.mapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mapControl1.Layers.Add(this.informationLayer2);
             this.mapControl1.Layers.Add(this.imageLayer1);
+            this.mapControl1.Layers.Add(this.informationLayer1);
             this.mapControl1.Location = new System.Drawing.Point(0, 116);
             miniMap1.Behavior = dynamicMiniMapBehavior1;
-            miniMap1.Layers.Add(miniMapImageTilesLayer1);
-            miniMap1.Layers.Add(miniMapVectorItemsLayer1);
+            miniMap1.Layers.Add(this.miniMapImageTilesLayer1);
+            miniMap1.Layers.Add(this.miniMapVectorItemsLayer1);
             this.mapControl1.MiniMap = miniMap1;
             this.mapControl1.Name = "mapControl1";
             this.mapControl1.Size = new System.Drawing.Size(800, 484);
             this.mapControl1.TabIndex = 3;
-            this.imageLayer1.DataProvider = this.openStreetMapDataProvider1;
-            this.openStreetMapDataProvider1.TileUriTemplate = "https://{0}.tile.INSERT_SERVER_NAME.com/{1}/{2}/{3}.png";
+            this.informationLayer2.DataProvider = this.bingRouteDataProvider1;
+            this.bingRouteDataProvider1.BingKey = "TXTsRuAN6El7U9nZPZUN~4mI-RxXABLCzRtRW-5mAtA~AmKuEx0GSgM1jnfBRujI_krflTlNF5Zt0QR_K" +
+    "tqsHmBlYE9KnpmOQ_gtNXDG_Koo";
+            this.imageLayer1.DataProvider = this.bingMapDataProvider2;
+            this.bingMapDataProvider2.BingKey = "TXTsRuAN6El7U9nZPZUN~4mI-RxXABLCzRtRW-5mAtA~AmKuEx0GSgM1jnfBRujI_krflTlNF5Zt0QR_K" +
+    "tqsHmBlYE9KnpmOQ_gtNXDG_Koo";
+            this.bingMapDataProvider2.Kind = DevExpress.XtraMap.BingMapKind.Road;
+            this.informationLayer1.DataProvider = this.bingElevationDataProvider1;
+            this.bingElevationDataProvider1.BingKey = "TXTsRuAN6El7U9nZPZUN~4mI-RxXABLCzRtRW-5mAtA~AmKuEx0GSgM1jnfBRujI_krflTlNF5Zt0QR_K" +
+    "tqsHmBlYE9KnpmOQ_gtNXDG_Koo";
             // 
             // XtraUserControl2
             // 
@@ -205,6 +218,11 @@
         private DevExpress.XtraMap.MapControl mapControl1;
         private DevExpress.XtraMap.InformationLayer informationLayer2;
         private DevExpress.XtraMap.ImageLayer imageLayer1;
-        private DevExpress.XtraMap.OpenStreetMapDataProvider openStreetMapDataProvider1;
+        private DevExpress.XtraMap.MiniMapImageTilesLayer miniMapImageTilesLayer1;
+        private DevExpress.XtraMap.MiniMapVectorItemsLayer miniMapVectorItemsLayer1;
+        private DevExpress.XtraMap.BingMapDataProvider bingMapDataProvider2;
+        private DevExpress.XtraMap.BingRouteDataProvider bingRouteDataProvider1;
+        private DevExpress.XtraMap.InformationLayer informationLayer1;
+        private DevExpress.XtraMap.BingElevationDataProvider bingElevationDataProvider1;
     }
 }
